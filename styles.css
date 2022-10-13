@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/** { !*обращаемся ко всем элементам*!*/
+/*    padding: 0; !*для быстроты нажать p0 и tab, то же самое для margin*!*/
+/*    margin: 0;*/
+/*}*/
+
+body {
+  background-color: #CCFFFF;
+  color: #8d6565;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  /*font: normal 16px 'Roboto', sans-serif;*/
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover { /*псевдо селектор, отвечает за наведение мышки на текст*/
+  text-decoration: underline; /*подчеркивать ссылки при наведении мышкой*/
+}
+
+a:active { /*что изменится при зажатии ссылки*/
+  color: blue;
+}
+
+a:visited { /*все посещенные ссылки подсвечиваются серым*/
+  color: grey;
+}
+
+.avatar {
+  width: 200px;
+  border-radius: 28px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.9);
+}
+
+.info {
+  margin-bottom: 20px;
+  display: flex;/*сделать все в одну строку*/
+}
+
+@media (max-width: 700px) {/*делает адаптивным для устройств*/
+  .info {
+    text-align: center;
+    display: block;
+  }
+}
+.info-text {
+  margin-left: 40px;
+}
+.info-text h4 {
+  margin-bottom: 10px;
+}
+
+.info p {
+  color: chocolate;
+  margin: 0;
+  font-style: oblique;
+  font-weight: bold;
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+  /*letter-spacing: 5px;*/
+  /*word-spacing: 40px;*/
+}
+
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+
+/*.social {*/
+/*    background: green;*/
+/*    !*padding: 15px;*!*/
+/*    !*15px по ox 40 px по oy*!*/
+/*    !*padding: 15px 40px; *!*/
+/*    !*padding 15px 20px 25px 30px;*!*/
+/*    padding-top: 15px;*/
+/*    padding-right: 20px;*/
+/*    padding-bottom: 25px;*/
+/*    padding-left: 40px;*/
+/*    !*то же самое с margin*!*/
+/*    margin: 20px;*/
+/*    border: 5px solid red;*/
+/*    border-bottom-style: dashed;*/
+/*    border-top-width: 15px;*/
+/*    border-right-color: black;*/
+/*}*/
+
+/*.box-model > div { !*только к детям применяются стили(>div)*!*/
+/*    float: left; !*расположить в линию*!*/
+/*    background: black;*/
+/*    height: 200px;*/
+/*    border: 4px solid red;*/
+/*    width: 25%;*/
+/*    box-sizing: border-box; !*чтобы они умешались в одну линию тк задали еще рамки*!*/
+/*}*/
+.bg-yellow {
+  background: #fff9dc;
+}
+
+.bg-green {
+  background: #e5ffe7;
+}
+
+.bg-red {
+  background: #ffe5e5;
+}
+
+.card {
+  padding: 15px 20px;
+  margin-bottom: 20px; /*всегда лучше делать bottom а не top потому что если удалим верхним то непонятно что будет*/
+  border-radius: 20px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.list {
+  padding: 0 20px;
+}
+
+.list li {
+  color: #8d6565;
+  margin-bottom: 10px;
+  /*border-bottom: 1px solid grey; подчеркивает каждый элемент серым цветом*/
+}
+
+.table {
+  width: 100%;
+}
+
+.table td {
+  padding-bottom: 10px; /*margin-bottom не сработает тк свойство display: table-cell*/
+}
+
+.table td:nth-child(2), .table td:nth-child(3) { /*псевдо селектор, обращаемся к стобцу под номером ...*/
+  color: brown;
+}
+
+/*.table tr:nth-child(odd) { !*каждая нечетная строчка выделяется крассным*!*/
+/*    background: red;*/
+/*}*/
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+.link-list li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.contact h2 {
+  text-align: center;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: grey;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+  padding: 15px 0 10px;
+  outline: none;/*убирает границы при нажатии*/
+  font-family: inherit; /*шрифт должен наследоваться*/
+}
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.row > .form-group {
+  width: 50%;
+
+}
+.row > .form-group:first-child {
+  margin-right: 20px;
+}
+.btn {
+  background: black;
+  padding: 15px 20px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;/*меняется курсор при наведении на кнопку*/
+}
+.btn:hover { /*псевдо селектор, изменяет цвет кнопки при наведении*/
+  opacity: 0.9;
+}
+/*!*Position*!*/
+/*.position {*/
+/*  position: relative;*/
+/*  margin-top: 0.5em;*/
+/*  padding: 10px;*/
+/*  border: 4px solid black;*/
+/*  height: 300px;*/
+/*}*/
+/*!*два этих блока для навигации по сайту можно применить*!*/
+/*.box {*/
+/*  position: fixed; !*отмеряет относительно контейнера*!*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  width: 100%;*/
+/*  height: 50px;*/
+/*  background: chocolate;*/
+/*}*/
+
